@@ -59,10 +59,10 @@ public class CurrentConditionsDisplay implements Display, Observers{
     text("%(atm)", 4*(width/4)/2+10, height-this.collum-20);
     //fill(50, 50, 100);
     textSize(10);
-    text("100___", 5*(width/3)/2-10, height-this.collum);
-    text(" 50___", 5*(width/3)/2-10, height-this.collum*0.5);
-    text(" 30___", 5*(width/3)/2-10, height-this.collum*0.3);
-    text(" 25___", 5*(width/3)/2-10, height-this.collum*0.25);
+    text("100___", 5*(width/4)/2-10, height-this.collum);
+    text(" 50___", 5*(width/4)/2-10, height-this.collum*0.5);
+    text(" 30___", 5*(width/4)/2-10, height-this.collum*0.3);
+    text(" 25___", 5*(width/4)/2-10, height-this.collum*0.25);
     //pressure
     //height
     fill(160*(alt/300),190*(alt/300),200*(alt/300));
