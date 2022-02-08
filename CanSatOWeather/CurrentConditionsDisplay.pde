@@ -6,7 +6,7 @@ public class CurrentConditionsDisplay implements Display, Observers{
   public CurrentConditionsDisplay(Subject sbj){
     this.mySub = sbj;
   }
-  public void display(float temp, float hum, float pres){
+  public void display(float temp, float hum, float pres, float alt){
    // pushStyle();
     //PFont mono;
     //mono = createFont("andalemo.ttf", 128);
@@ -66,8 +66,8 @@ public class CurrentConditionsDisplay implements Display, Observers{
     popStyle();
     
   }
-  public void update(float temp, float hum, float pres){
-    this.display(temp, hum, pres);
+  public void update(float temp, float hum, float pres, float alt){
+    this.display(temp, hum, pres, alt);
   }
   public String getDisplayName(){
     return this.displayName;
