@@ -56,7 +56,7 @@ void draw()
   //dis = new CurrentConditionsDisplay();
   //dis.display(0,0,0);
   cansat.notifyObservers(splitval, disS);
-  nav.selectDisplay();
+  disS = nav.selectDisplay();
   //nav.display(0.0,0.0,0.0);
 }
 
