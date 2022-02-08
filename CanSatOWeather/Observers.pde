@@ -1,5 +1,5 @@
 public interface Observers{
-  public void update(float temp, float hum, float pres);
+  public void update(float temp, float hum, float pres, float alt);
   public String getDisplayName();
   public void requestRegister(Subject sbj);
   public void requestRemove(Subject sbj);
