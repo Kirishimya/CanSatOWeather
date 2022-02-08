@@ -15,54 +15,71 @@ public class CurrentConditionsDisplay implements Display, Observers{
     text("Temperatura: "+temp+"°C", width-width*0.8, 3*navH/2);
     text("Humidade: "+hum+"%", width-width*0.8, 4*navH/2);
     text("Pressão: "+pres+" pascal", width-width*0.8, 5*navH/2);
+    text("Altitude: "+alt+" m", width-width*0.8, 6*navH/2);
     //popStyle();
     pushStyle();
     //temperature
     fill(((255*(temp/100.0)+100)%255),255,(255-255*(temp/100.0))%255);
-    rect(0, height, width/3, -collum*(temp/100.0));
+    rect(0, height, width/4, -collum*(temp/100.0));
     fill(0,0,0,0);
     stroke(255);
-    rect(0, height, width/3, -this.collum);
+    rect(0, height, width/4, -this.collum);
     fill(255);
     textSize(20);
-    text("°C", (width/3)/2-10, height-this.collum-20);
+    text("°C", (width/4)/2-10, height-this.collum-20);
     textSize(10);
-    text("100_________", (width/3)/2-10, height-this.collum);
-    text(" 50_________", (width/3)/2-10, height-this.collum*0.5);
-    text(" 30_________", (width/3)/2-10, height-this.collum*0.3);
-    text(" 25_________", (width/3)/2-10, height-this.collum*0.25);
+    text("100___", (width/4)/2-10, height-this.collum);
+    text(" 50___", (width/4)/2-10, height-this.collum*0.5);
+    text(" 30___", (width/4)/2-10, height-this.collum*0.3);
+    text(" 25___", (width/4)/2-10, height-this.collum*0.25);
     //teperature
     //humidity
     fill(255*(hum/100.0),255*(hum/100.0),255);
-    rect(width/3, height, width/3, -this.collum*(hum/100.0));
+    rect(width/4, height, width/4, -this.collum*(hum/100.0));
     fill(0,0,0,0);
     stroke(255);
-    rect(width/3, height, width/3, -this.collum);
+    rect(width/4, height, width/4, -this.collum);
     fill(255);
     textSize(20);
-    text("%(umi)", 3*(width/3)/2-30, height-this.collum-20);
+    text("%(umi)", 4*(width/4)/2-30, height-this.collum-20);
     textSize(10);
-    text("100_________", 3*(width/3)/2-10, height-this.collum);
-    text(" 50_________", 3*(width/3)/2-10, height-this.collum*0.5);
-    text(" 30_________", 3*(width/3)/2-10, height-this.collum*0.3);
-    text(" 25_________", 3*(width/3)/2-10, height-this.collum*0.25);
+    text("100___", 4*(width/4)/2-10, height-this.collum);
+    text(" 50___", 4*(width/4)/2-10, height-this.collum*0.5);
+    text(" 30___", 4*(width/4)/2-10, height-this.collum*0.3);
+    text(" 25___", 4*(width/4)/2-10, height-this.collum*0.25);
     //humidity
     //pressure
     fill(160*(pres/atmInPascal),190*(pres/atmInPascal),200*(pres/atmInPascal));
-    rect(2*width/3, height, width/3, -this.collum*(pres/atmInPascal));
+    rect(2*width/4, height, width/4, -this.collum*(pres/atmInPascal));
     fill(0,0,0,0);
     stroke(255);
-    rect(2*width/3, height, width/3, -this.collum);
+    rect(2*width/4, height, width/4, -this.collum);
     fill(255);
     textSize(20);
-    text("%(atm)", 4*(width/3)/2+10, height-this.collum-20);
+    text("%(atm)", 4*(width/4)/2+10, height-this.collum-20);
     //fill(50, 50, 100);
     textSize(10);
-    text("100_________", 5*(width/3)/2-10, height-this.collum);
-    text(" 50_________", 5*(width/3)/2-10, height-this.collum*0.5);
-    text(" 30_________", 5*(width/3)/2-10, height-this.collum*0.3);
-    text(" 25_________", 5*(width/3)/2-10, height-this.collum*0.25);
+    text("100___", 5*(width/3)/2-10, height-this.collum);
+    text(" 50___", 5*(width/3)/2-10, height-this.collum*0.5);
+    text(" 30___", 5*(width/3)/2-10, height-this.collum*0.3);
+    text(" 25___", 5*(width/3)/2-10, height-this.collum*0.25);
     //pressure
+    //height
+    fill(160*(alt/300),190*(alt/300),200*(alt/300));
+    rect(3*width/4, height, width/4, -this.collum*(alt/300));
+    fill(0,0,0,0);
+    stroke(255);
+    rect(3*width/4, height, width/4, -this.collum);
+    fill(255);
+    textSize(20);
+    text("%(3hm)", 5*(width/4)/2+10, height-this.collum-20);
+    //fill(50, 50, 100);
+    textSize(10);
+    text("100___", 7*(width/4)/2-10, height-this.collum);
+    text(" 50___", 7*(width/4)/2-10, height-this.collum*0.5);
+    text(" 30___", 7*(width/4)/2-10, height-this.collum*0.3);
+    text(" 25___", 7*(width/4)/2-10, height-this.collum*0.25);
+    //height
     popStyle();
     
   }
